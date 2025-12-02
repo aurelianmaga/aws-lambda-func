@@ -2,10 +2,10 @@ using Xunit;
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
-using BookingFunc;
-using BookingFunc.Models;
+using LambdaFunc;
+using LambdaFunc.Models;
 
-namespace Booking.Tests;
+namespace Lambda.Tests;
 
 public class FunctionTest
 {

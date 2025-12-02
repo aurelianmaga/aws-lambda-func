@@ -13,6 +13,6 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\booking-func-cs\booking-func-cs.csproj" />
+    <ProjectReference Include="..\..\src\lambda-func-cs\lambda-func-cs.csproj" />
   </ItemGroup>
 </Project>

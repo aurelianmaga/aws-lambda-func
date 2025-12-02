@@ -43,13 +43,13 @@ Install test tool
 
 Execute unit tests
 ```
-    cd "booking-func-cs/test/booking-func-cs.Tests"
+    cd "lambda-func-cs/test/lambda-func-cs.Tests"
     dotnet test
 ```
 
 Deploy function to AWS Lambda
 ```
-    cd "booking-func-cs/src/booking-func-cs"
+    cd "lambda-func-cs/src/lambda-func-cs"
     dotnet lambda deploy-function
 ```
 

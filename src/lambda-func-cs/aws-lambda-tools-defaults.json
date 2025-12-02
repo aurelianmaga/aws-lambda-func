@@ -12,5 +12,5 @@
   "function-runtime": "dotnet8",
   "function-memory-size": 128,
   "function-timeout": 30,
-  "function-handler": "booking-func-cs::BookingFunc.Function::FunctionHandler"
+  "function-handler": "lambda-func-cs::LambdaFunc.Function::FunctionHandler"
 }

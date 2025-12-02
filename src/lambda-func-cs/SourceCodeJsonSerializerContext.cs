@@ -8,9 +8,9 @@ using Amazon.Lambda.Serialization.SystemTextJson;
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 // [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
 // source code serializer
-[assembly: LambdaSerializer(typeof(SourceGeneratorLambdaJsonSerializer<BookingFunc.SourceCodeJsonSerializerContext>))]
+[assembly: LambdaSerializer(typeof(SourceGeneratorLambdaJsonSerializer<LambdaFunc.SourceCodeJsonSerializerContext>))]
 
-namespace BookingFunc;
+namespace LambdaFunc;
 
 [JsonSerializable(typeof(APIGatewayHttpApiV2ProxyRequest))]
 [JsonSerializable(typeof(APIGatewayHttpApiV2ProxyResponse))]

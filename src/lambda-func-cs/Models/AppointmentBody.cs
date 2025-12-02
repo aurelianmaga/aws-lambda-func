@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace BookingFunc.Models;
+namespace LambdaFunc.Models;
 
 public class AppointmentBody
 {

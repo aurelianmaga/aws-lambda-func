@@ -5,9 +5,9 @@ using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.Serialization.SystemTextJson;
 
-using BookingFunc.Models;
+using LambdaFunc.Models;
 
-namespace BookingFunc;
+namespace LambdaFunc;
 
 public class Function
 {
