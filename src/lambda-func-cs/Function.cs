@@ -21,15 +21,15 @@ public class Function
     {
         var response = new APIGatewayHttpApiV2ProxyResponse();
 
-        var body = JsonSerializer.Deserialize<AppointmentBody>(request.Body);
         request.Headers.TryGetValue("authorization", out var authorization);
 
+        Console.WriteLine(authorization);
         if (string.IsNullOrWhiteSpace(authorization)) {
             response.StatusCode = (int)HttpStatusCode.Unauthorized;
             return response;
         }
 
-        Console.WriteLine(authorization);
+        var body = JsonSerializer.Deserialize<Appointment>(request.Body);
 
         response.Body = body?.Name ?? string.Empty;
         response.StatusCode = (int)HttpStatusCode.OK;
