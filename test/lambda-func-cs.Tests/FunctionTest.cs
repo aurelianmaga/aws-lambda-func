@@ -1,16 +1,14 @@
 using Xunit;
 using Amazon.Lambda.APIGatewayEvents;
-using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
 using LambdaFunc;
-using LambdaFunc.Models;
 
 namespace Lambda.Tests;
 
 public class FunctionTest
 {
     [Fact]
-    public void TestToUpperFunction()
+    public void TestLambdaFunction()
     {
         var request = new APIGatewayHttpApiV2ProxyRequest();
         request.Headers =  new Dictionary<string, string>();
