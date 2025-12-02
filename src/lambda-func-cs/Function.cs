@@ -1,9 +1,7 @@
 using System.Net;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
-using Amazon.Lambda.Serialization.SystemTextJson;
 
 using LambdaFunc.Models;
 
@@ -22,14 +20,16 @@ public class Function
         var response = new APIGatewayHttpApiV2ProxyResponse();
 
         request.Headers.TryGetValue("authorization", out var authorization);
-
         Console.WriteLine(authorization);
+
         if (string.IsNullOrWhiteSpace(authorization)) {
             response.StatusCode = (int)HttpStatusCode.Unauthorized;
             return response;
         }
 
-        var body = JsonSerializer.Deserialize<Appointment>(request.Body);
+        var jsonAsString = request.IsBase64Encoded ? System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(request.Body)) : request.Body;
+        Console.WriteLine(jsonAsString);
+        var body = JsonSerializer.Deserialize<Appointment>(jsonAsString);
 
         response.Body = body?.Name ?? string.Empty;
         response.StatusCode = (int)HttpStatusCode.OK;
