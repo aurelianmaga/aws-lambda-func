@@ -36,6 +36,11 @@ If already installed check if new version is available.
     dotnet tool update -g Amazon.Lambda.Tools
 ```
 
+Install test tool
+```
+    dotnet tool install --global Amazon.Lambda.TestTool-8.0 --version 0.15.1
+```
+
 Execute unit tests
 ```
     cd "booking-func-cs/test/booking-func-cs.Tests"
